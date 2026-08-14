@@ -65,3 +65,10 @@ public classIntelligent DNA Pattern Search {
                 .forEach(i -> System.out.print(i + " "));
     }
 }
+
+
+Sample Input :
+AABAACAADAABAABA
+AABA
+Sample Output :
+0 9 12
