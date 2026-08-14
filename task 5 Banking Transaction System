@@ -41,3 +41,12 @@ public class Main {
         System.out.println(account.getBalance());
     }
 }
+
+
+Sample Input :
+3
+Deposit 5000
+Withdraw 2000
+Deposit 1000
+Sample Output :
+4000
