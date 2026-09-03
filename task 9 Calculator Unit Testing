@@ -1,0 +1,52 @@
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String expression = sc.nextLine().trim();
+
+        String[] parts = expression.split("\\s+");
+
+        double a = Double.parseDouble(parts[0]);
+        String operator = parts[1];
+        double b = Double.parseDouble(parts[2]);
+
+        double result = 0;
+
+        if (operator.equals("+")) {
+            result = a + b;
+        } 
+        else if (operator.equals("/")) {
+            if (b == 0) {
+                System.out.println("Test Failed");
+                return;
+            }
+            result = a / b;
+        }
+
+        boolean passed = false;
+
+        if (operator.equals("+")) {
+            passed = (result == a + b);
+        } 
+        else if (operator.equals("/")) {
+            passed = (result == a / b);
+        }
+
+        if (passed) {
+            System.out.println("Test Passed");
+        } else {
+            System.out.println("Test Failed");
+        }
+
+        sc.close();
+    }
+}
+
+Sample Input
+10 + 20
+
+Sample Output
+Test Passed
